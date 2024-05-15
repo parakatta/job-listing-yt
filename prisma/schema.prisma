@@ -17,8 +17,27 @@ model JobListing {
   location         String
   salary           String
   type             String
+  desc             String
+  responsibility   String
+  requirements     String
   createdAt        DateTime  @default(now())
   updatedAt        DateTime  @updatedAt
   expiresAt        DateTime?
   postedAt         DateTime?
+}
+
+
+model FormContent {
+    id              String    @id @default(cuid())
+    createdAt       DateTime  @default(now())
+    updatedAt       DateTime  @updatedAt
+    firstName       String
+    lastName        String
+    email           String
+    phoneNumber     String
+    resumeName      String
+    fileUpload      String
+    jobId           String
+    jobTitle        String
+    companyName     String
 }
